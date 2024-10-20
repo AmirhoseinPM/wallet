@@ -46,7 +46,7 @@ public class WithdrawalValidator implements Validator {
                             () -> new ValidationException("Something went wrong")
                     );
         } catch(Exception e) {
-            throw new ValidationException(e.getMessage() + "\n" + e.getCause());
+            throw new ValidationException("Somethings went wrong!!!);
         }
         long MAXIMUM_DAILY_WITHDRAWAL = 15_000_000L;
         if ((todayWithdraw + transaction.getAmount()) > MAXIMUM_DAILY_WITHDRAWAL)
